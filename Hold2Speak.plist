@@ -1,0 +1,9 @@
+{
+	Filter = {
+		Bundles = (
+			"com.apple.TelephonyUtilities",
+			"com.apple.TelephonyUI",
+			"com.apple.mobilephone",
+		);
+	};
+}
