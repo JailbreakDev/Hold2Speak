@@ -174,7 +174,7 @@ void sendSpeakerNotification (BOOL isCallBar)
 
 -(void)longPressReceived:(UIGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateBegan) {
-        sendSpeakerNotification(YES);
+        sendSpeakerNotification(NO);
         [self buttonPressed:(TPButton *)sender.view];
         [self slidingButton:sender.view didSlideToProportion:0.0f];
     }
