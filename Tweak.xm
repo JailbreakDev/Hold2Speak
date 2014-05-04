@@ -99,9 +99,7 @@ void sendSpeakerNotification (BOOL isCallBar)
 - (void)useSpeaker:(NSNotification *)notification {
     BOOL wants = [[[notification userInfo] objectForKey:@"Speaker"] boolValue];
     if (wants)
-      //dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
           [self setRouteToSpeaker];
-        //});
 }
 %end
 //On iOS 6 InCallController viewDidAppear:
@@ -117,15 +115,14 @@ void sendSpeakerNotification (BOOL isCallBar)
     %orig(arg1);
 }
 %new
-%new
 - (void)useSpeaker:(NSNotification *)notification {
     BOOL wants = [[[notification userInfo] objectForKey:@"Speaker"] boolValue];
     if (wants)
     //on iOS6 the speaker seems to
     //enable and subsequently, disable
-		  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
-          [CHIvar(self,_inCallViewController,id) sixSquareButtonClicked: (isiOS7) ? [CHIvar(self,_inCallViewController,id) speakerButtonPosition] : 2];
-		    });
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+		[CHIvar(self,_inCallViewController,id) sixSquareButtonClicked: (isiOS7) ? [CHIvar(self,_inCallViewController,id) speakerButtonPosition] : 2];
+	x});
     //this delay seems to fix that
 }
 %end
