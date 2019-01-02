@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Hold2Speak' target in the 'Hold2Speak' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
