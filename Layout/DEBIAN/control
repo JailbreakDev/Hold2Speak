@@ -1,0 +1,17 @@
+Package: isklikas.Hold2Speak
+Name: Hold2Speak
+Version: 1.3
+Description: This tweak designed by Jeff Benjamin, offers a way to answer your calls, while activating your speaker. To do so, hold or double tap on the swipe to answer bar, or hold on the answer button. Many thanks, to the developer @sharedRoutine (Jack) for developing this with me and helping me put toghether some of the crucial pieces for this tweak, but also to my friends Nick and Michał, for calling me every 5 mins, when testing was needed. Many thanks to Sebastien from iDB too, for suggesting the Double Tap feature.
+Section: System
+Depends: firmware (>= 7.0), mobilesubstrate
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: isklikas
+dev: 
+Homepage: 
+Depiction: 
+Maintainer: 
+Icon: 
+
